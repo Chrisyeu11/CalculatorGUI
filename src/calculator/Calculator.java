@@ -66,7 +66,8 @@ public class Calculator extends JFrame implements ActionListener {
         eqButton = new JButton("=");
         clrButton = new JButton("C");
         ceButton = new JButton("CE");
-        delButton = new JButton("\u2190");
+        delButton = new JButton("←");
+
 
         functionButtons[0] = addButton;
         functionButtons[1] = subButton;
@@ -127,7 +128,7 @@ public class Calculator extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new Calculator());
+        SwingUtilities.invokeLater(Calculator::new);
     }
 
     @Override
